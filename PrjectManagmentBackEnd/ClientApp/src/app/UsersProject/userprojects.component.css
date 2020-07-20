@@ -1,0 +1,47 @@
+.mage {
+    width: 100%;
+    height: 150px;
+}
+
+.back {
+    background-color: rgb(54, 90, 109);
+    margin-top: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+.but{
+    height: 40px;
+    width: 15%;
+    background-color: rgb(98, 98, 230);
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.tex{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    margin-left: 5%;
+    height: 50px;
+    width: 30%;
+}
+
+.dat{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    margin-left: 5%;
+    height: 50px;
+    width: 30%;
+}
+
+.sec {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    margin-left: 5%;
+    height: 50px;
+    width: 30%;
+}

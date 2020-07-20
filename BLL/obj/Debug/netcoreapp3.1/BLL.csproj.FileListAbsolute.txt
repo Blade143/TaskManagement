@@ -1,0 +1,12 @@
+D:\kpi\Diplom\PrjectManagmentBackEnd\BLL\bin\Debug\netcoreapp3.1\BLL.deps.json
+D:\kpi\Diplom\PrjectManagmentBackEnd\BLL\bin\Debug\netcoreapp3.1\BLL.dll
+D:\kpi\Diplom\PrjectManagmentBackEnd\BLL\obj\Debug\netcoreapp3.1\BLL.csprojAssemblyReference.cache
+D:\kpi\Diplom\PrjectManagmentBackEnd\BLL\obj\Debug\netcoreapp3.1\BLL.AssemblyInfoInputs.cache
+D:\kpi\Diplom\PrjectManagmentBackEnd\BLL\obj\Debug\netcoreapp3.1\BLL.AssemblyInfo.cs
+D:\kpi\Diplom\PrjectManagmentBackEnd\BLL\bin\Debug\netcoreapp3.1\BLL.pdb
+D:\kpi\Diplom\PrjectManagmentBackEnd\BLL\bin\Debug\netcoreapp3.1\DAL.dll
+D:\kpi\Diplom\PrjectManagmentBackEnd\BLL\bin\Debug\netcoreapp3.1\DAL.pdb
+D:\kpi\Diplom\PrjectManagmentBackEnd\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CopyComplete
+D:\kpi\Diplom\PrjectManagmentBackEnd\BLL\obj\Debug\netcoreapp3.1\BLL.dll
+D:\kpi\Diplom\PrjectManagmentBackEnd\BLL\obj\Debug\netcoreapp3.1\BLL.pdb
+D:\kpi\Diplom\PrjectManagmentBackEnd\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CoreCompileInputs.cache

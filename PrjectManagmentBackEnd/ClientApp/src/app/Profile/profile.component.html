@@ -1,0 +1,18 @@
+<div class="prof">
+    <div *ngIf="!isUpd">
+        <h1> Weelcome to your Profile, {{user.userName}} </h1>
+        <p> You have {{user.finished}} finished tasks </p>
+        <p> and {{user.failed}} failed tasks </p>
+        <p> Your rating mark now equals to {{user.rating}}  <p>
+        <input style="margin-left: 65%;" class="but" type="button" value="Logoff" (click) = "LogOff()">
+        <input class="but" type="button" value="Update" (click) = "Update()">
+        <input class="but" type="button" value="Delete" (click) = "Delete()">
+    </div>
+    <div *ngIf="isUpd">
+        <input type="text" [(ngModel)]="user.login" value="user.login" class="form-control inp" /> <br>
+        <input type="text" [(ngModel)]="user.password" value="user.password" class="form-control inp" />  <br>
+        <input type="text" [(ngModel)]="user.userName" value="user.userName" class="form-control inp" />  <br>
+        <input class="but" type="button" value="Save" (click) = "Save()">
+        <input class="but" type="button" value="Cancel" (click) = "Cancel()">
+    </div>
+</div>

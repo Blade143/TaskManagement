@@ -1,0 +1,34 @@
+<div style="font-size: medium; text-align: center;" *ngIf="!deleted">
+    <table cellspacing="1" border = "1">
+        <thead style="background-color: rgb(67, 154, 189);">
+            <td> Login </td>
+            <td> Password </td>
+            <td> UserName </td>
+            <td> Finished </td>
+            <td> Failed </td>
+            <td> CRUD Action </td>
+        </thead>
+        <tbody style="background-color: rgb(141, 191, 235);">
+            <tr>
+            <td *ngIf="editing"> <input type="text" [(ngModel)]="user.login" class="form-control" /> </td>
+            <td *ngIf="editing"> <input type="text" [(ngModel)]="user.password" class="form-control" /> </td>
+            <td *ngIf="editing"> <input type="text" [(ngModel)]="user.userName" class="form-control" /> </td>
+            <td *ngIf="editing"> <input type="number" [(ngModel)]="user.finished" class="form-control" /> </td>
+            <td *ngIf="editing"> <input type="number" [(ngModel)]="user.failed" class="form-control" /> </td>
+                <td *ngIf="!editing"> {{ user.login }}  </td>
+                <td *ngIf="!editing"> {{ user.password }} </td>
+                <td *ngIf="!editing"> {{ user.userName }} </td>
+                <td *ngIf="!editing"> {{ user.finished }} </td>
+                <td *ngIf="!editing"> {{ user.failed }} </td>
+            <td *ngIf = "!editing"> 
+                <p> <input style="text-align: center; width: 80px; height: 35px; background-color: rgb(102, 182, 236);" type="button" value="Update" class="btn btn-default" (click)="UpdateProject()" />  </p> 
+                <p> <input style="text-align: center; width: 80px; height: 35px; background-color: rgb(102, 182, 236);" type="button" value="Delete" class="btn btn-default" (click)="DeleteProject()" />  </p>  
+            </td>
+            <td *ngIf = "editing"> 
+                <p> <input style="text-align: center; width: 80px; height: 35px; background-color: rgb(102, 182, 236);" type="button" value="Save" class="btn btn-default" (click)="Save()" />  </p> 
+                <p> <input style="text-align: center; width: 80px; height: 35px; background-color: rgb(102, 182, 236);" type="button" value="Cancel" class="btn btn-default" (click)="Cancel()" />  </p>  
+            </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>

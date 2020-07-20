@@ -1,0 +1,25 @@
+.back {
+    background-color: rgb(54, 90, 109);
+    width: 100%;
+    margin-top: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+}
+
+.lis {
+    margin-left: 80%;
+    height: 40px;
+    width: 20%;
+    margin-top: 50px;
+    position: static;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+}
+
+.but{
+    height: 40px;
+    width: 10%;
+    background-color: rgb(98, 98, 230);
+    margin-left: 90%;
+}

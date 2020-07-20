@@ -1,0 +1,29 @@
+<div>
+    <select [(ngModel)] = selectTask #MySelect name="tasks" class="lis" (change)="onChange(MySelect.value)" required> <option [ngValue]="null" [disabled]="true" > Select type of tasks </option> <option value="projectTasks"> Project Tasks </option> <option value="usertasks"> User Tasks </option> </select>
+    <div *ngIf="userTasks">
+        <div class="back"  *ngFor="let task of tasks">
+            <p> {{task.taskName}} </p>
+            <p> {{task.taskDiscritpion}} </p>
+            <p> For finishing this task you will earn {{task.ratingPoints}} points <p>
+            <p> Status: {{task.taskStatus}} </p>
+            <p> Createted on {{task.taskCreateDate | date:'medium' }} </p>
+            <p> Will be expired on {{task.taskEstimeteDate | date:'medium'}} </p>
+            <div *ngIf="!CheckStatus(task)">
+            <input type="button" value="Leave" class="but" (click)="LeaveTask(task)">
+            <input type="button" value="Finish" class="but" (click)="FinishTask(task)">
+            </div>
+        </div>
+    </div>
+    <div *ngIf="!userTasks">
+        <div class="back"  *ngFor="let task of tasks">
+            <p> {{task.taskName}} </p>
+            <p> {{task.taskDiscritpion}} </p>
+            <p> For finishing this task you will earn {{task.ratingPoints}} points <p>
+            <p> Status: {{task.taskStatus}} </p>
+            <p> Createted on {{task.taskCreateDate | date:'medium' }} </p>
+            <p> Will be expired on {{task.taskEstimeteDate | date:'medium'}} </p>
+            <input *ngIf="userRating >= task.ratingPoints" type="button" value="Claim" class="but" (click)="ClaimTask(task)">
+        </div>
+    </div>
+    <input *ngIf="selectTask" class="but" type="button" value="Close tasks" (click)="onClose()">
+</div>

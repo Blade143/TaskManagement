@@ -1,0 +1,24 @@
+.appTable {
+    width: 100%;
+}
+
+.profile {
+    width: 49%;
+    position: absolute;
+    top: 15%;
+    left: 15px;
+}
+
+.projects {
+    width: 49%;
+    position: absolute;
+    top: 60%;
+    left: 15px;
+}
+
+.tasks {
+    width: 49%;
+    position: absolute;
+    top: 18%;
+    right: 15px;
+}

@@ -1,0 +1,9 @@
+D:\kpi\Diplom\PrjectManagmentBackEnd\DAL\bin\Debug\netcoreapp3.1\DAL.deps.json
+D:\kpi\Diplom\PrjectManagmentBackEnd\DAL\bin\Debug\netcoreapp3.1\DAL.dll
+D:\kpi\Diplom\PrjectManagmentBackEnd\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfoInputs.cache
+D:\kpi\Diplom\PrjectManagmentBackEnd\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfo.cs
+D:\kpi\Diplom\PrjectManagmentBackEnd\DAL\bin\Debug\netcoreapp3.1\DAL.pdb
+D:\kpi\Diplom\PrjectManagmentBackEnd\DAL\obj\Debug\netcoreapp3.1\DAL.csprojAssemblyReference.cache
+D:\kpi\Diplom\PrjectManagmentBackEnd\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CoreCompileInputs.cache
+D:\kpi\Diplom\PrjectManagmentBackEnd\DAL\obj\Debug\netcoreapp3.1\DAL.dll
+D:\kpi\Diplom\PrjectManagmentBackEnd\DAL\obj\Debug\netcoreapp3.1\DAL.pdb

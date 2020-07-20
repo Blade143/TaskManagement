@@ -1,0 +1,17 @@
+<div *ngIf="!creation">
+    <input style="width: 50%; margin-left: 27%; margin-top: 20%;" class="but" type="button" value="Create Your Own Project!" (click) = "CreateProject()">
+    <div class="back" *ngFor="let p of projects; let i = index">
+        <img class= "mage" *ngIf="projects[i].image" [src]="projects[i].image">
+        <h1> {{projects[i].title}} </h1>
+        <h2> {{projects[i].discription}} </h2>
+        <h2> {{projects[i].status}} </h2>
+        <input type="button" class="but" value="Join" (click)="Join(projects[i].projectId)">
+    </div>
+</div>
+<div *ngIf="creation">
+    <input class="tex" style="margin-top: 20%;" type="text" placeholder="Project name" [(ngModel)] = "cproject.title">
+    <input class="tex" type="text" placeholder="Project discription" [(ngModel)] = "cproject.discription">
+    <input class="tex" type="text" placeholder="Project image" [(ngModel)] = "cproject.image"> <br>
+    <input style="margin-left: 35%;" type="button" class="but" value="Create" (click)="Create()">
+    <input type="button" class="but" value="Cancel" (click)="Cancel()">
+</div>

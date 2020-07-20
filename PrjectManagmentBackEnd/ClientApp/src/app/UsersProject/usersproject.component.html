@@ -1,0 +1,57 @@
+<div *ngIf="!creattask">
+<div class="back" *ngFor="let projec of projects; let i = index">
+    <ng-template [ngIf]="project?.projectId != projec.projectId" [ngIfElse]="edit">
+    <img class= "mage" *ngIf="projects[i].image" [src]="projects[i].image">
+    <h1> {{projects[i].title}} </h1>
+    <h2> {{projects[i].discription}} </h2>
+    <h2> {{projects[i].status}} </h2>
+    <p style="margin-left: 73%;"> Your role on this project : {{projects[i].role}}</p>
+    <input style="margin-left: 67%;" class="but" type="button" value="Check Tasks" (click) = "CheckTask(projec.projectId)">
+    <input class="but" type="button" value="Leave Project" (click) = "Leave(projec.projectId)"> <br>
+    <input style="margin-left: 49.5%;" *ngIf="projec.role == 'Boss'" class="but" type="button" value="Delete Project" (click) = "Delete(projec.projectId)">
+    <input class="but" type="button" value="Create Task" (click) = "CreateTask(projec)">
+    <input *ngIf="projec.role == 'Boss'" class="but" type="button" value="Update Project" (click) = "Update(projec)">
+    </ng-template>
+    <ng-template #edit>
+        <input class="tex" type="text" placeholder="Title" [(ngModel)]="projects[i].title" >  
+        <select class="sec" *ngIf="manageu" #MySelect1 [(ngModel)]="secetedUserr" (change)="SelectUser(MySelect1.value)" required> 
+            <option [ngValue]="null" [disabled]="true"> Select User </option>
+            <option *ngFor="let user of projectusers" [value]="user.userId"> {{user.userName}} </option>
+        </select> 
+        <select class="sec" *ngIf="managet" #MySelect2 [(ngModel)]="selectedTaskk" (change)="SelectTask(MySelect2.value)" required> 
+            <option [ngValue]="null" [disabled]="true"> Select Task </option>
+            <option *ngFor="let task of projecttasks" [value]="task.taskId"> {{task.taskName}} </option>
+        </select>
+        <br>
+        <input class="tex" type="text" placeholder="Discription" [(ngModel)]="projects[i].discription" >
+        <input *ngIf="secetedUserr" value="Fire this user" type="button" class="but" (click)="FireUser()"> 
+        <select class="sec" *ngIf="selectedTaskk" #MySelect3 [(ngModel)]="selectedUserr" (change)="SelectTaskUser(MySelect3.value)" required>
+            <option [ngValue]="null" [disabled]="true"> Select User </option>
+            <option *ngFor="let user of projectusers" [value]="user.userId"> {{user.userName}} </option>
+        </select> <br>
+        <input class="tex" type="text" placeholder="Image" [(ngModel)]="projects[i].image" > 
+        <input *ngIf="(selectedTaskk && selectedUserr)" type="button" value="Change User" class="but" (click) = "ChangeUserOnTask()"> <br>
+        <input style="margin-left: 60%;" class="but" type="button" value="Manage Users" (click)="ManageUsers()">
+        <input class="but" type="button" value="Manage Tasks" (click)="ManageTasks()"> <br>
+        <input style="margin-left: 60%;" class="but" type="button" value="Save" (click)="Save(i)">
+        <input class="but" type="button" value="Cancel" (click)="Cancel()">
+    </ng-template>
+</div>
+</div>
+<div class="back" *ngIf="creattask">
+    <input class="tex" type="text" [(ngModel)] = "creatingtask.taskName" placeholder="Task Name"> <br>
+    <input class="tex" type="text" [(ngModel)] = "creatingtask.disription" placeholder="Task discription"> <br>
+    <select class="sec" #MySelect5 [(ngModel)]="selectedTaskk" (change)="SelectTask(MySelect5.value)" required> 
+        <option [ngValue]="null" [disabled]="true"> Select Parent Task </option>
+        <option *ngFor="let task of projecttasks" [value]="task.taskId"> {{task.taskName}} </option>
+    </select>
+    <br>
+    <select class="sec" #MySelect6 [(ngModel)]="selectedRatng" (change)="SelectRating(MySelect6.value)" required> 
+        <option [ngValue]="0" [disabled]="true"> Select Rating For Task </option>
+        <option *ngFor="let point of alowedRating" [value]="point"> {{point}} </option>
+    </select>
+    <br>
+    <input class="dat" type="date" [(ngModel)]="esimateDate">
+    <input class="but" type="button" value="Create" (click)="SaveTask()">
+    <input class="but" type="button" value="Cancel" (click)="CancelTask()">
+</div>

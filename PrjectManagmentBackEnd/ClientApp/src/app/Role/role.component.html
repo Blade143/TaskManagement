@@ -1,0 +1,25 @@
+<div style="font-size: medium; text-align: center;" *ngIf="!deleted">
+    <table cellspacing="1" border = "1">
+        <thead style="background-color: rgb(67, 154, 189);">
+            <td> Role Name </td>
+            <td> Role Priority </td>
+            <td> CRUD Action </td>
+        </thead>
+        <tbody style="background-color: rgb(141, 191, 235);">
+            <tr>
+            <td *ngIf="editing"> <input type="text" [(ngModel)]="role.roleName" class="form-control" /> </td>
+            <td *ngIf="editing"> <input type="number" [(ngModel)]="role.priority" class="form-control" /> </td>
+                <td *ngIf="!editing"> {{ role.roleName }}  </td>
+                <td *ngIf="!editing"> {{ role.priority }} </td>
+            <td *ngIf = "!editing"> 
+                <p> <input style="text-align: center; width: 80px; height: 35px; background-color: rgb(102, 182, 236);" type="button" value="Update" class="btn btn-default" (click)="UpdateProject()" />  </p> 
+                <p> <input style="text-align: center; width: 80px; height: 35px; background-color: rgb(102, 182, 236);" type="button" value="Delete" class="btn btn-default" (click)="DeleteProject()" />  </p>  
+            </td>
+            <td *ngIf = "editing"> 
+                <p> <input style="text-align: center; width: 80px; height: 35px; background-color: rgb(102, 182, 236);" type="button" value="Save" class="btn btn-default" (click)="Save()" />  </p> 
+                <p> <input style="text-align: center; width: 80px; height: 35px; background-color: rgb(102, 182, 236);" type="button" value="Cancel" class="btn btn-default" (click)="Cancel()" />  </p>  
+            </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>

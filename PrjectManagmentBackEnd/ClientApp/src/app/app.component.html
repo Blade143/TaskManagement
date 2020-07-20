@@ -1,0 +1,26 @@
+<html>
+<body>
+    <header class = "header1">
+      <nav>
+        <ul>
+          <li class="li1"> Project Management </li>
+        </ul>
+      </nav>
+      <input *ngIf="!logedIn" type="button" value="Login" class="navBut"  style="margin-left: 50%;"  (click) = "Login()">   
+      <input *ngIf="!logedIn" type="button" value="Register" class="navBut" (click) = "Register()">
+      <input *ngIf="logedIn" type="button" value="Projects" class="navBut" style="margin-left: 50%;" (click) = "ShowProjects()">   
+      <input *ngIf="logedIn" type="button" value="Profile" class="navBut"   (click) = "ShowProfile()">    
+    </header>
+    <login *ngIf="login" (resp)="LogedIn($event)" (setToken)="setToken($event)" (setUser)="SetUser($event)" ></login>
+    <register *ngIf="register" (resp)="Login()" ></register>
+    <div *ngIf="logedIn">
+       <profile class="profile" [user] = "user" [token] = "token" (logoff) = "LogOff()"> </profile> 
+      <h3 *ngIf="!showProjects" style="position: absolute; top: 16%; right: 15px;"> *To check your or available tasks, please select Project and push Check Tasks button </h3> 
+      <usertask  class="tasks" *ngIf="showusertask" [userRating]="user.rating" [token] = "token" [projectId] = "selectedProject" (close) = "CloseTasks()"> </usertask>
+      <h1 *ngIf="!showProjects" style="position: absolute; top: 50%"> Below you can check project you are involved in! </h1>
+      <usersproject class="projects"  *ngIf="profile" (deletes) = "ngOnInit()" (tasks)="ShowTasks($event)" (projid)="SetProjectId($event)" [userRating] = "user.rating" [token] ="token" [projects] = "usersprojects">  </usersproject>
+      <h1 *ngIf="showProjects" style="position: absolute; top: 50%"> Below you can check all projects in Project Management system! </h1>
+      <allp (joined)="ngOnInit()" *ngIf="showProjects" [token] = "token"> </allp>
+    </div>
+</body>
+</html>

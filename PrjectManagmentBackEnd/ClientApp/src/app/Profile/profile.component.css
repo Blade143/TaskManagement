@@ -1,0 +1,22 @@
+.prof {
+    background-color: rgb(54, 90, 109);
+    font-size: large;
+    width: 100%;
+    margin-top: 50px;
+    padding: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.but{
+    height: 40px;
+    width: 10%;
+    background-color: rgb(98, 98, 230);
+    margin-left: 20px;
+}
+
+.inp {
+    width: 30%;
+    height: 50px;
+    margin-top: 2%;
+    margin-left: 10%;
+}

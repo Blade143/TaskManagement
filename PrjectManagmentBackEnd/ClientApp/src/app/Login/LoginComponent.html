@@ -1,0 +1,12 @@
+<div style="margin-left: 32%; margin-top: 10%; background-color: rgb(54, 90, 109); width: 35%; height: 200px;" >
+    <div class="form-group">
+        <input style="margin-left: 15%; width: 70%; height: 40px; margin-top: 20px; font-size: large;" type="text" placeholder="Login" [(ngModel)]="user.login" class="form-control" />
+    </div>
+    <div class="form-group">
+        <input style="margin-left: 15%; width: 70%; height: 35px; margin-top: 20px; font-size: large;" type="password" placeholder="Password" [(ngModel)]="user.password" class="form-control" />
+    </div>
+    <div>
+        <input style="margin-left: 72%; text-align: center; width: 80px; height: 35px; background-color: rgb(102, 182, 236); margin-top: 20px;" type="button" value="Login" (click)="Save()" class="btn btn-success" />
+    </div>
+</div>
+
